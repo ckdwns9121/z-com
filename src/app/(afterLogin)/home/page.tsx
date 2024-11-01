@@ -10,18 +10,9 @@ export default function Home() {
       <TabProvider>
         <Tab />
         <PostForm />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
+        {[...Array(10)].map((_, index) => (
+          <Post key={index} />
+        ))}
       </TabProvider>
     </main>
   );
