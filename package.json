@@ -6,22 +6,36 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "mock": "npx tsx watch ./src/mocks/http.ts"
   },
   "dependencies": {
+    "@auth/core": "^0.37.4",
     "classnames": "^2.5.1",
+    "cors": "^2.8.5",
     "dayjs": "^1.11.13",
+    "express": "^4.21.1",
     "next": "14.2.15",
+    "next-auth": "^5.0.0-beta.25",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
     "@faker-js/faker": "^9.2.0",
+    "@mswjs/http-middleware": "^0.10.2",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.15",
+    "msw": "2.1",
     "typescript": "^5"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
   }
 }
